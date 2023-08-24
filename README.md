@@ -1,6 +1,7 @@
  ## Biblioteca-api 
- 
- > TESTE PARA VAGA DE DESENVOLVEDOR BACK-END JÚNIOR 🧑🏽‍💻
+ > Status: Developing ⚠️
+
+ < TESTE PARA VAGA DE DESENVOLVEDOR BACK-END JÚNIOR 🧑🏽‍💻 >
  ## Tecnologias Utilizadas
 
 + Java
