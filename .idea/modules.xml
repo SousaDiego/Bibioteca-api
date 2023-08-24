@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/livros/livros/livros.iml" filepath="$PROJECT_DIR$/livros/livros/livros.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/livros-api.iml" filepath="$PROJECT_DIR$/.idea/livros-api.iml" />
     </modules>
   </component>

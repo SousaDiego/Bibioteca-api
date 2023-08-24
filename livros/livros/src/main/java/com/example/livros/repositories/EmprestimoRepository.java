@@ -10,8 +10,7 @@ import java.util.List;
 
 @Repository
 public interface EmprestimoRepository extends JpaRepository<Emprestimo, String> {
-    @Query("SELECT e FROM livrosemprestimo e WHERE e.usuario =:id")
-    List<Emprestimo> pegarLivro(String id);
 
-
+    @Query("SELECT COUNT(e) FROM livrosemprestimo e WHERE e.usuario = :id")
+    Long countEmprestimosByUsuario(String id);
 }

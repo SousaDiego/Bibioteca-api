@@ -30,4 +30,5 @@ public class Emprestimo {
 
     public Emprestimo(EmprestimoRequestDTO data) {this.livro = data.livro(); this.usuario = data.usuario();}
 
+
 }

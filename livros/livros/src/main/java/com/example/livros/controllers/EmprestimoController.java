@@ -26,24 +26,20 @@ public class EmprestimoController {
     }
     @PostMapping("/save")
     public ResponseEntity saveEmprestimos(@RequestBody EmprestimoRequestDTO data) {
-        Emprestimo emprestimo = new Emprestimo(data);
-        repository.save(emprestimo);
-        return ResponseEntity.ok().build();
+        Long emprestimosCount = repository.countEmprestimosByUsuario(data.getUsuarioId());
+        if (emprestimosCount < 2) {
+            Emprestimo emprestimo = new Emprestimo(data);
+            repository.save(emprestimo);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().body("Usuário atingiu o limite de empréstimos.");
+        }
     }
-
-
     @DeleteMapping("/delete/{id}")
     @Transactional
     public ResponseEntity deleteLivroEmprestimo(@PathVariable String id) {
         repository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-
-    @GetMapping("/{id}")
-    public ResponseEntity getLivros(@PathVariable String id){
-        List<Emprestimo> emprestimosList = repository.pegarLivro(id);
-        return ResponseEntity.ok(emprestimosList);
-    }
-
 
 }
