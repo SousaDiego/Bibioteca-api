@@ -5,8 +5,8 @@
  ## Tecnologias Utilizadas
 
 + Java
-+ Spring Boot
 + Maven
++ Spring Boot
 + Spring Data JPA
 + Spring Web
 + MySQL
